@@ -57,22 +57,34 @@ O projeto tem como objetivo **fomentar o comércio local**, apoiar pequenos prod
 
 ---
 
-## 📁 Estrutura do Projeto (simplificada)
+## 📁 Estrutura do Projeto
+
+O projeto segue uma arquitetura **baseada em domínio (feature-based)**, separando responsabilidades globais, funcionalidades e componentes reutilizáveis.
 
 ```text
 src/
  ├── app/
- │   ├── models/
- │   │   └── product.model.ts
- │   ├── services/
- │   │   ├── product.service.ts
- │   │   └── farmer.service.ts
- │   ├── pages/
+ │   ├── core/
+ │   │   ├── guards/
+ │   │   ├── interceptors/
+ │   │   ├── models/
+ │   │   └── services/
+ │   │
+ │   ├── features/
+ │   │   ├── auth/
+ │   │   ├── consumer/
+ │   │   ├── farmer/
  │   │   ├── home/
- │   │   └── product-offers/
+ │   │   ├── orders/
+ │   │   └── products/
+ │   │
+ │   ├── shared/
+ │   │
+ │   ├── app.config.ts
+ │   ├── app.css
+ │   ├── app.html
  │   ├── app.routes.ts
- │   └── app.component.ts
+ │   ├── app.spec.ts
+ │   └── app.ts
+ │
  └── assets/
-     └── images/
-         ├── alface.jpg
-         └── tomate.jpg
