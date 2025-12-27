@@ -1,0 +1,28 @@
+<script>
+  let 
+</script>
+
+<body>
+  <section class="hero">
+    <section class="secImg" >
+      <div class="logo"></div>
+    </section>
+    <div class="purchasePannel">
+      O que você procura hoje?
+      @if (products.length > 0) {
+        @for (produto of products; track $index) {
+        <div class="prods" (click)="goToProduct(produto.name)">
+          <img [src]="produto.photo" alt="{{produto.name}}" class="img">
+            <p class="card">{{produto.name.toUpperCase()}}</p>
+
+        </div>
+      }      
+      }
+      @else {
+
+          <p class="card">Nada disponivel</p>
+      }
+      
+    </div>
+  </section>
+</body>

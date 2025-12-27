@@ -1,0 +1,35 @@
+<body>
+    <section class="hero">
+        <section class="secImg">
+            <div class="logo"></div>
+        </section>
+        <div class="purchasePannel">
+            O que você procura hoje?
+            @if (produtos.length > 0) {
+            @for (produto of produtos; track $index) {
+            <div class="prods">
+                <p class= 'card'>Produto: {{produto.name}}</p>
+                <p class= 'card'>Preço: {{produto.price | currency:"BRL":'symbol':'1.2-2'}}</p>
+                <p class= 'card'>Quantidade: {{produto.available}}</p>
+                <p class= 'card'>Produtor: {{produto.prodName}}</p>
+                <div class="collapse">
+                    <input type="checkbox" [id]="'toggle'+produto.id">
+                    <label class="card" [for]="'toggle'+produto.id">Fotos</label>
+                    <div class="content">
+                    @for (img of produto.photo; track $index) {
+                            <img class="img" alt="" [src]="img">
+                        }
+                    </div>
+                    </div>
+            
+            </div>
+            }
+            }
+            @else {
+
+            <p class="card">Nada disponivel</p>
+            }
+
+        </div>
+    </section>
+</body>

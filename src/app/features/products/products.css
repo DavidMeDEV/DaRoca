@@ -1,0 +1,106 @@
+body {
+  background: #A0B998;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero {
+  height: 100vh;
+  display: flex;
+  flex:1;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: start;
+}
+.secImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  background-image: url(../home/logo2.png) ;
+  background-size:20vw;
+  background-repeat: no-repeat;
+  background-position-y: -2px; 
+  width: 20vw;
+  height: 13vw;
+}
+
+.purchasePannel{
+
+  display: flex;
+  background-color: #828F6C;
+  align-items: center;
+  width: 60%;
+  height: 36vw;
+  /* border config */
+  border: 2px solid #386641;
+  border-radius: 10px;
+  flex-direction: column;
+  box-shadow: 5px 5px 10px #000;
+  overflow-y: auto ;
+}
+
+.prods{
+  font-family: Verdana;
+  display: flex;
+  width: 98%;
+  height: auto;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  border: 2px solid #386641;
+  z-index: 1;
+  box-shadow: 2px 2px 5px #000;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card{
+  width: auto;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.img{
+  display: flex;
+  flex-direction: row;
+  width: 110px;
+  height: 100px;
+  /* box-shadow: 0px 0px 10px #000; */
+  border-radius: 5px;
+}
+
+.prods:hover{
+  transform: scale(1.01);
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.collapse input {
+  display: none;
+}
+
+.collapse label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.collapse .content {
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.collapse input:checked ~ .content {
+  max-height: 200px; /* ajuste */
+}
